@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ssalguero/C++/MineHunt/buscaminas.cpp
+iostream
+-
+fstream
+-
+string
+-
+jugador.cpp
+/home/ssalguero/C++/MineHunt/jugador.cpp
+juego.cpp
+/home/ssalguero/C++/MineHunt/juego.cpp
+
+/home/ssalguero/C++/MineHunt/juego.cpp
+juego.h
+/home/ssalguero/C++/MineHunt/juego.h
+
+/home/ssalguero/C++/MineHunt/juego.h
+iostream
+-
+fstream
+-
+string
+-
+
+/home/ssalguero/C++/MineHunt/jugador.cpp
+jugador.h
+/home/ssalguero/C++/MineHunt/jugador.h
+
+/home/ssalguero/C++/MineHunt/jugador.h
+iostream
+-
+

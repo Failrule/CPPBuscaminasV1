@@ -1,5 +1,7 @@
 #include "juego.h"
 
+using namespace std;
+
 Juego::Juego()
 {
 
@@ -25,9 +27,9 @@ void Juego::CargarPuntaje(string jugador)
         ofstream lista ("jugadores");
             lista.close();
         exit(1);
-    } 
-    else 
-    { 
+    }
+    else
+    {
 
         listaJugadores = CargarJugadores(jugadores);
             if (listaJugadores.find(jugador) != string::npos)
@@ -39,13 +41,13 @@ void Juego::CargarPuntaje(string jugador)
 
                 puntajeJugador = CargarJugadores(puntaje);
                 int puntos = atoi(puntajeJugador.c_str());
-                
+
                 m_int_puntajeTotal = puntos; //Todo para esto jaja
 
-            } 
+            }
             else
             {
-            
+
             ofstream jugadores;
             jugadores.open("jugadores",ios::app);
             jugadores << jugador<<"\n";
@@ -54,7 +56,7 @@ void Juego::CargarPuntaje(string jugador)
             puntaje.close();
             m_int_puntajeTotal = 0;
             cout << jugador<<" es un nuevón."<< endl;
-            
+
             }
     }
 
@@ -66,7 +68,7 @@ void Juego::Guardar(int puntajeObtenido, string jugador)
     m_int_puntajeJuego = puntajeObtenido;
     m_int_puntajeTotal = m_int_puntajeJuego + m_int_puntajeTotal;
 
-            
+
     ofstream puntaje;
     puntaje.open(jugador,ios::out);
     puntaje << m_int_puntajeTotal;

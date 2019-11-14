@@ -1,13 +1,11 @@
 #include "jugador.h"
 
-
+using namespace std;
 
 Jugador::Jugador(string nombre)
 {
     m_string_nombre = nombre;
 }
-
-
 
 string Jugador::ObtenerNombre()
 {

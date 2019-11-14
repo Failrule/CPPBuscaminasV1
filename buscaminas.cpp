@@ -5,8 +5,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "jugador.cpp"
-#include "juego.cpp"
+#include "jugador.h"
+#include "juego.h"
 
 using namespace std;
 

@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/Buscaminas.dir/buscaminas.cpp.o CMakeFiles/Buscaminas.dir/jugador.cpp.o CMakeFiles/Buscaminas.dir/juego.cpp.o  -o Buscaminas 

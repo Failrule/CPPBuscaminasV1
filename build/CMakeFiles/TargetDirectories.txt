@@ -1,3 +1,0 @@
-/home/ssalguero/C++/MineHunt/build/CMakeFiles/rebuild_cache.dir
-/home/ssalguero/C++/MineHunt/build/CMakeFiles/Buscaminas.dir
-/home/ssalguero/C++/MineHunt/build/CMakeFiles/edit_cache.dir

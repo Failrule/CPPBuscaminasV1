@@ -22,17 +22,17 @@ public:
     Juego();
 
 
-    string CargarJugadores(ifstream &a);
+    std::string CargarJugadores(std::ifstream &a);
 
     /**
     * @param jugador del juego actual
     */
-    void CargarPuntaje(string jugador);
+    void CargarPuntaje(std::string jugador);
 
     /**
     * @param puntajeObtenido del juego actual
     */
-    void Guardar(int puntajeObtenido, string jugador);
+    void Guardar(int puntajeObtenido, std::string jugador);
 
     /**
     * Juego

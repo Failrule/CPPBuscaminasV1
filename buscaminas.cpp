@@ -10,14 +10,8 @@
 
 using namespace std;
 
-
-
 int main()
 {
-   
-
-
-
 
 string nombrejugador;
 
@@ -30,20 +24,20 @@ string nombrejugador;
 
     cout << endl << "\t\t===========================" << endl;
     cout << "\t\t\tBuscaminas" << endl;
-    cout << "  Jugador: "<< Jugador1.ObtenerNombre()<< endl << endl; 
-
-
-  
+    cout << "  Jugador: "<< Jugador1.ObtenerNombre()<< endl << endl;
 
     Juego Juego1;
 
     Juego1.CargarPuntaje(Jugador1.ObtenerNombre());
 
     cout<<"Puntaje:\t"<<Juego1.ObtenerPuntaje()<< endl;
-    int puntajeObt;
-    cout << "Ganaste:\t";cin>>puntajeObt;
-    Juego1.Guardar(puntajeObt,nombrejugador);
-    cout<<"Puntaje:\t"<<Juego1.ObtenerPuntaje()<< endl;
-    
+
+  //  int puntajeObt;
+  //  cout << "Ganaste:\t";cin>>puntajeObt;
+  //  Juego1.Guardar(puntajeObt,nombrejugador);
+  //  cout<<"Puntaje:\t"<<Juego1.ObtenerPuntaje()<< endl << endl;
+
+
+
     return 0;
 }

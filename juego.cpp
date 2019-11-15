@@ -98,8 +98,13 @@ void Juego::ConfigurarNivel(int tablero, int dificultad)
         dimension = 15;
     }
 
-    for(int i = 0; i <= )
-
+    for(int i = 0; i <= dimension; i++ )
+    {
+      for(int j = 0; j <= dimension; j++)
+      {
+        // No se cómo más
+      }
+    }
 
 }
 

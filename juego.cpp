@@ -23,7 +23,7 @@ void Juego::CargarPuntaje(string jugador)
     jugadores.open("jugadores");
     if (!jugadores.is_open())
     {
-        cout << "Error cargando archivo jugadores\nReinicie el juego." << endl;
+        cout << "  Error cargando archivo jugadores\n  Reinicie el juego." << endl;
         ofstream lista ("jugadores");
             lista.close();
         exit(1);
@@ -34,7 +34,7 @@ void Juego::CargarPuntaje(string jugador)
         listaJugadores = CargarJugadores(jugadores);
             if (listaJugadores.find(jugador) != string::npos)
             {
-                cout << "Bienvenido de nuevo " <<jugador <<"!"<< endl;
+                cout << "  ¡Bienvenido de nuevo " <<jugador <<"!"<< endl;
                 string puntajeJugador;
                 ifstream puntaje;
                 puntaje.open(jugador);
@@ -55,7 +55,7 @@ void Juego::CargarPuntaje(string jugador)
             ofstream puntaje (jugador);
             puntaje.close();
             m_int_puntajeTotal = 0;
-            cout << jugador<<" es un nuevón."<< endl;
+            cout << "  " << jugador<<" es un nuevo jugador."<< endl;
 
             }
     }
@@ -98,8 +98,8 @@ void Juego::ConfigurarNivel(int tablero, int dificultad)
         dimension = 15;
     }
 
+    for(int i = 0; i <= )
 
-    cout << "Tablero nivel: " << dimension << endl;
 
 }
 

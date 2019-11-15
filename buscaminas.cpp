@@ -30,7 +30,8 @@ string nombrejugador;
 
     Juego1.CargarPuntaje(Jugador1.ObtenerNombre());
 
-    cout<<"Puntaje:\t"<<Juego1.ObtenerPuntaje()<< endl;
+    cout<<"  Puntaje actual:\t"<<Juego1.ObtenerPuntaje()<< endl;
+
 
   //  int puntajeObt;
   //  cout << "Ganaste:\t";cin>>puntajeObt;

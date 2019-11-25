@@ -34,7 +34,7 @@ void Juego::CargarPuntaje(string jugador)
         listaJugadores = CargarJugadores(jugadores);
             if (listaJugadores.find(jugador) != string::npos)
             {
-                cout << "  ¡Bienvenido de nuevo " <<jugador <<"!"<< endl;
+                cout << "\n ¡Bienvenido de nuevo " <<jugador <<"!\n"<< endl;
                 string puntajeJugador;
                 ifstream puntaje;
                 puntaje.open(jugador);
@@ -80,31 +80,77 @@ void Juego::Jugar()
 {
     // El buscaminas
 }
-void Juego::ConfigurarNivel(int tablero, int dificultad)
+void Juego::ConfigurarNivel()
 {
 
-    int dimension;
 
-    if (tablero == 1)
+int dificultad,tablero;
+
+
+  cout<<"\n  Tablero\n  Pequeño[1] Mediano[2] Grande[3]: ";
+  cin>>tablero;
+  cout<<"\n  Dificultad\n  Fácil[1] Normal[2] Difícil[3]:   ";
+  cin>>dificultad;
+
+    switch (tablero)
     {
-        dimension = 5;
-    }
-    if (tablero == 2)
-    {
-        dimension = 10;
-    }
-    if (tablero == 3)
-    {
-        dimension = 15;
+      case (1):
+        cout << "  Pequeño\n";
+        tablero = 3;
+        break;
+      case (2):
+        cout << "  Mediano\n";
+        tablero = 5;
+        break;
+      case (3):
+        cout << "  Grande\n";
+        tablero = 10;
+        break;
+      default:
+        cout << "  Eso no es un tablero!\n";
+        break;
+
     }
 
-    for(int i = 0; i <= dimension; i++ )
+    switch (dificultad)
     {
-      for(int j = 0; j <= dimension; j++)
+      case (1):
+        cout << "  Fácil\n";
+        break;
+      case (2):
+        cout << "  Normal\n";
+        break;
+      case (3):
+        cout << "  Difícil\n";
+        break;
+      default:
+        cout << "  Eso no es una dificultad!\n";
+        break;
+}
+
+cout << endl;
+
+int matriz[tablero][tablero];
+
+    for(int i=0; i<tablero; i++)
+    {
+      for(int j=0; j<tablero; j++)
       {
-        // No se cómo más
+        matriz[i][j] = 0;
       }
     }
+
+    for(int i=0; i<tablero; i++)
+    {
+      cout << "  ";
+      for(int j=0; j<tablero; j++)
+      {
+        cout << matriz[i][j] << " " ;
+      }      cout << endl;
+    }
+
+    cout << endl;
+
 
 }
 

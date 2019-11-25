@@ -5,13 +5,14 @@
 #include <fstream>
 #include <string>
 
-class Juego 
+
+class Juego
 {
 private:
     ///Puntaje acumulado del jugador
-    int m_int_puntajeTotal; 
+    int m_int_puntajeTotal;
     ///Puntaje del juego actual
-    int m_int_puntajeJuego; 
+    int m_int_puntajeJuego;
     ///Tamaño del tablero
     int m_int_tablero;
     ///Dificultad de minas
@@ -40,10 +41,8 @@ public:
     void Jugar();
 
      /**
-    * @param tablero dimensiones del tablero de juego
-    * @param dificultad nivel de dificultad del tablero
     */
-    void ConfigurarNivel(int tablero, int dificultad);
+    void ConfigurarNivel();
 
     /**
     * @return puntajeObtenido de todas las partidas realizadas por el jugador

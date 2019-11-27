@@ -41,6 +41,8 @@ int tablero, dificultad;
 
     Juego1.ConfigurarNivel();
     Juego1.MinarTablero();
+    Juego1.RastrearMinas();
+
 
 
   //  int puntajeObt;

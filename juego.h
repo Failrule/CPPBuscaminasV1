@@ -67,6 +67,11 @@ public:
     int ObtenerPuntaje();
 
     /**
+    * @return puntajeObtenido de todas las partidas realizadas por el jugador
+    */
+    void RastrearMinas();
+
+    /**
    */
 
 

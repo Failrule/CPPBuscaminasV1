@@ -83,12 +83,28 @@ void Juego::Jugar()
 
 void Juego::ConfigurarNivel()
 {
+  int dificultad;
 
   cout<<"\n  Tablero\n  Pequeño[1] Mediano[2] Grande[3]:\t ";
   cin>>m_int_tablero;
 
   cout<<"\n  Dificultad\n  Fácil[1] Normal[2] Difícil[3]:\t ";
-  cin>>m_int_dificultad;
+  cin>>dificultad;
+  switch(dificultad)
+  {
+    case(1):
+    m_int_dificultad = 5;
+    break;
+    case(2):
+    m_int_dificultad = 15;
+    break;
+    case(3):
+    m_int_dificultad = 30;
+    break;
+    default:
+    cout<<"\n  Nope.\n";
+
+  }
 
 }
 
@@ -118,10 +134,11 @@ srand (time(NULL));
        }
 
 
-
-     cout<<endl;
      int count = 0;
-     int minas = 15;
+     int minas = (5*5)*m_int_dificultad/100;
+     //int minas = 3;
+
+     cout<<"--"<<minas<<"--"<<endl;
      int lugar1,lugar2;
 
      while(minas>0)

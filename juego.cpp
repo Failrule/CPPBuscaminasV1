@@ -121,7 +121,8 @@ srand (time(NULL));
 
      cout<<endl;
      int count = 0;
-     int minas = 2;
+     int minas = 15;
+     int lugar1,lugar2;
 
      while(minas>0)
      {
@@ -129,12 +130,12 @@ srand (time(NULL));
        cout<<"Paso "<<count<<" ";
        count++;
 
-       int lugar1,lugar2;
+
        lugar1 = rand() % 5;
        lugar2 = rand() % 5;
-
        if(m_arr_tPequenio[lugar1][lugar2]==77)
        {
+         cout<<lugar1<<lugar2<<endl;
         m_arr_tPequenio[lugar1][lugar2]=88;
         cout<<"Mina "<<minas<<" en puesto "<<lugar1<<lugar2<<endl;
 

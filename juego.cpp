@@ -123,7 +123,7 @@ srand (time(NULL));
      int count = 0;
      int minas = 2;
 
-     while(minas>=0)
+     while(minas>0)
      {
 
        cout<<"Paso "<<count<<" ";

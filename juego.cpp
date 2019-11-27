@@ -138,7 +138,6 @@ srand (time(NULL));
         m_arr_tPequenio[lugar1][lugar2]=88;
         cout<<"Mina "<<minas<<" en puesto "<<lugar1<<lugar2<<endl;
 
-
         minas--;
 
        }

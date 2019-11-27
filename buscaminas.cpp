@@ -21,7 +21,7 @@ int tablero, dificultad;
 
     Jugador Jugador1(nombrejugador);
 
-    system("clear");
+    //system("clear");
 
     cout << endl << "\t\t===========================" << endl;
     cout << "\t\t\tBuscaminas" << endl;
@@ -30,12 +30,19 @@ int tablero, dificultad;
 
     Juego1.CargarPuntaje(Jugador1.ObtenerNombre());
 
+
+
     cout<<"  Puntaje actual:\t"<<Juego1.ObtenerPuntaje()<< endl;
     cout << endl << "\t\t===========================" << endl;
     cout << "\t\t\tNuevo juego:" << endl;
     cout << endl << "\t\t===========================" << endl;
-    
+
+
+
     Juego1.ConfigurarNivel();
+    Juego1.MinarTablero();
+
+
   //  int puntajeObt;
   //  cout << "Ganaste:\t";cin>>puntajeObt;
   //  Juego1.Guardar(puntajeObt,nombrejugador);

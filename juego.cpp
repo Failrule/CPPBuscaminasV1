@@ -80,76 +80,87 @@ void Juego::Jugar()
 {
     // El buscaminas
 }
+
 void Juego::ConfigurarNivel()
 {
 
+  cout<<"\n  Tablero\n  Pequeño[1] Mediano[2] Grande[3]:\t ";
+  cin>>m_int_tablero;
 
-int dificultad,tablero;
+  cout<<"\n  Dificultad\n  Fácil[1] Normal[2] Difícil[3]:\t ";
+  cin>>m_int_dificultad;
 
-
-  cout<<"\n  Tablero\n  Pequeño[1] Mediano[2] Grande[3]: ";
-  cin>>tablero;
-  cout<<"\n  Dificultad\n  Fácil[1] Normal[2] Difícil[3]:   ";
-  cin>>dificultad;
-
-    switch (tablero)
-    {
-      case (1):
-        cout << "  Pequeño\n";
-        tablero = 3;
-        break;
-      case (2):
-        cout << "  Mediano\n";
-        tablero = 5;
-        break;
-      case (3):
-        cout << "  Grande\n";
-        tablero = 10;
-        break;
-      default:
-        cout << "  Eso no es un tablero!\n";
-        break;
-
-    }
-
-    switch (dificultad)
-    {
-      case (1):
-        cout << "  Fácil\n";
-        break;
-      case (2):
-        cout << "  Normal\n";
-        break;
-      case (3):
-        cout << "  Difícil\n";
-        break;
-      default:
-        cout << "  Eso no es una dificultad!\n";
-        break;
 }
 
-cout << endl;
+void Juego::MinarTablero()
+{
+srand (time(NULL));
 
-int matriz[tablero][tablero];
+  switch (m_int_tablero)
+  {
+    case (1):
 
-    for(int i=0; i<tablero; i++)
-    {
-      for(int j=0; j<tablero; j++)
+     for(int i=0;i<5;i++)
+     {
+      for(int j=0;j<5;j++)
       {
-        matriz[i][j] = 0;
+       m_arr_tPequenio[i][j]=77;
       }
-    }
+     }
 
-    for(int i=0; i<tablero; i++)
-    {
-      cout << "  ";
-      for(int j=0; j<tablero; j++)
-      {
-        cout << matriz[i][j] << " " ;
-      }      cout << endl;
-    }
+     cout<<"\nTablero limpio\n";
+       for(int i=0;i<5;i++)
+       {
+        for(int j=0;j<5;j++)
+        {
+         cout<<"  "<<m_arr_tPequenio[i][j]<<" ";
+       } cout<<endl<<endl;
+       }
 
-    cout << endl;
+
+
+     cout<<endl;
+     int count = 0;
+     int minas = 2;
+
+     while(minas>=0)
+     {
+
+       cout<<"Paso "<<count<<" ";
+       count++;
+
+       int lugar1,lugar2;
+       lugar1 = rand() % 5;
+       lugar2 = rand() % 5;
+
+       if(m_arr_tPequenio[lugar1][lugar2]==77)
+       {
+        m_arr_tPequenio[lugar1][lugar2]=88;
+        cout<<"Mina "<<minas<<" en puesto "<<lugar1<<lugar2<<endl;
+
+
+        minas--;
+
+       }
+        else
+        {
+         cout<<"Mina "<<minas<<" repetida "<<lugar1<<lugar2<<endl;
+
+        }
+
+
+     }
+
+  }//Fin switch
+
+cout<<"\nTablero minado\n";
+  for(int i=0;i<5;i++)
+  {
+   for(int j=0;j<5;j++)
+   {
+    cout<<"  "<<m_arr_tPequenio[i][j]<<" ";
+  } cout<<endl<<endl;
+  }
 
 
 }

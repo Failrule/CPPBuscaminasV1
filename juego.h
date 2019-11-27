@@ -4,6 +4,9 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <stdlib.h>
+#include <time.h>
+
 
 
 class Juego
@@ -17,6 +20,16 @@ private:
     int m_int_tablero;
     ///Dificultad de minas
     int m_int_dificultad;
+    ///
+    int m_int_minas;
+
+    std::string m_str_estalla;
+
+    int m_arr_tPequenio[3][3];
+
+    int m_arr_tNormal[5][5];
+
+    int m_arr_tGrande[10][10];
 
 
 public:
@@ -45,9 +58,17 @@ public:
     void ConfigurarNivel();
 
     /**
+   */
+    void MinarTablero();
+
+    /**
     * @return puntajeObtenido de todas las partidas realizadas por el jugador
     */
     int ObtenerPuntaje();
+
+    /**
+   */
+
 
 
 };

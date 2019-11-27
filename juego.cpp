@@ -85,8 +85,8 @@ void Juego::ConfigurarNivel()
 {
   int dificultad;
 
-  cout<<"\n  Tablero\n  Pequeño[1] Mediano[2] Grande[3]:\t ";
-  cin>>m_int_tablero;
+  // cout<<"\n  Tablero\n  Pequeño[1] Mediano[2] Grande[3]:\t ";
+  // cin>>m_int_tablero;
 
   cout<<"\n  Dificultad\n  Fácil[1] Normal[2] Difícil[3]:\t ";
   cin>>dificultad;
@@ -112,9 +112,6 @@ void Juego::MinarTablero()
 {
 srand (time(NULL));
 
-  switch (m_int_tablero)
-  {
-    case (1):
 
      for(int i=0;i<5;i++)
      {
@@ -168,7 +165,6 @@ srand (time(NULL));
 
      }
 
-  }//Fin switch
 
 cout<<"\nTablero minado\n";
   for(int i=0;i<5;i++)

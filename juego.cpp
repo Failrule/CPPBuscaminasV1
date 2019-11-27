@@ -190,19 +190,28 @@ void Juego::RastrearMinas()
    {
     if(m_arr_tPequenio[i][j]==77)
     {
-     int contador = 0
-     if(m_arr_tPequenio[i-1][j]==88){contador ++;}else{}//superior
-     if(m_arr_tPequenio[i-1][j+1]==88){contador ++;}else{}//superior derecha
-     if(m_arr_tPequenio[i][j+1]==88){contador ++;}else{}//derecha
-     if(m_arr_tPequenio[i-1][j+1]==88){contador ++;}else{}//inferior derecha
-     if(m_arr_tPequenio[i-1][j]==88){contador ++;}else{}//inferior
-     if(m_arr_tPequenio[i-1][j-1]==88){contador ++;}else{}//inferior izquierda
-     if(m_arr_tPequenio[i][j-1]==88){contador ++;}else{}//izquierda
-     if(m_arr_tPequenio[i-1][j-1]==88){contador ++;}else{}//superior izquierda
+     int contador = 0;
+     if(m_arr_tPequenio[i-1][j]==88){contador ++;}//superior
+     if(m_arr_tPequenio[i-1][j+1]==88){contador ++;}//superior derecha
+     if(m_arr_tPequenio[i][j+1]==88){contador ++;}//derecha
+     if(m_arr_tPequenio[i-1][j+1]==88){contador ++;}//inferior derecha
+     if(m_arr_tPequenio[i-1][j]==88){contador ++;}//inferior
+     if(m_arr_tPequenio[i-1][j-1]==88){contador ++;}//inferior izquierda
+     if(m_arr_tPequenio[i][j-1]==88){contador ++;}//izquierda
+     if(m_arr_tPequenio[i-1][j-1]==88){contador ++;}//superior izquierda
      m_arr_tPequenio[i][j]=contador;
     }
     //Si es mina, no hacer nada
   } cout<<endl;
   }
+
+  cout<<"\nTablero minado\n";
+    for(int i=0;i<5;i++)
+    {
+     for(int j=0;j<5;j++)
+     {
+      cout<<"\t"<<m_arr_tPequenio[i][j]<<"\t";
+     } cout<<endl<<endl<<endl<<endl;
+    }
 
 }

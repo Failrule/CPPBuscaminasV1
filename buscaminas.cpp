@@ -13,11 +13,13 @@ using namespace std;
 int main()
 {
 
-string nombrejugador;
-int tablero, dificultad;
+    string nombrejugador;
+    int tablero, dificultad;
 
     cout<<"  Nombre:\t";
-    cin>>nombrejugador;
+    cout.flush();
+    //cin>>nombrejugador;
+    nombrejugador="a";
 
     Jugador Jugador1(nombrejugador);
 

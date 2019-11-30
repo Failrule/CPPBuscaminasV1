@@ -83,13 +83,13 @@ void Juego::Jugar()
 
 void Juego::ConfigurarNivel()
 {
-  int dificultad;
+  int dificultad=1;
 
   // cout<<"\n  Tablero\n  Pequeño[1] Mediano[2] Grande[3]:\t ";
   // cin>>m_int_tablero;
 
   cout<<"\n  Dificultad\n  Fácil[1] Normal[2] Difícil[3]:\t ";
-  cin>>dificultad;
+  //cin>>dificultad;
   switch(dificultad)
   {
     case(1):
@@ -113,18 +113,18 @@ void Juego::MinarTablero()
 srand (time(NULL));
 
 
-     for(int i=0;i<5;i++)
+     for(int i=0;i<3;i++)
      {
-      for(int j=0;j<5;j++)
+      for(int j=0;j<3;j++)
       {
        m_arr_tPequenio[i][j]=77;
       }
      }
 
      cout<<"\nTablero limpio\n";
-       for(int i=0;i<5;i++)
+       for(int i=0;i<3;i++)
        {
-        for(int j=0;j<5;j++)
+        for(int j=0;j<3;j++)
         {
          cout<<"  "<<m_arr_tPequenio[i][j]<<" ";
         } cout<<endl<<endl;
@@ -132,7 +132,8 @@ srand (time(NULL));
 
 
      int count = 0;
-     int minas = (5*5)*m_int_dificultad/100;
+     //int minas = (5*5)*m_int_dificultad/100;
+     int minas = 2;
 
      cout<<"--"<<minas<<"--"<<endl;
      int lugar1,lugar2;
@@ -166,9 +167,9 @@ srand (time(NULL));
 
 
 cout<<"\nTablero minado\n";
-  for(int i=0;i<5;i++)
+  for(int i=0;i<3;i++)
   {
-   for(int j=0;j<5;j++)
+   for(int j=0;j<3;j++)
    {
     cout<<"  "<<m_arr_tPequenio[i][j]<<" ";
    } cout<<endl<<endl;
@@ -184,9 +185,9 @@ int Juego::ObtenerPuntaje()
 
 void Juego::RastrearMinas()
 {
-  for(int i=0;i<5;i++)
+  for(int i=0;i<3;i++)
   {
-   for(int j=0;j<5;j++)
+   for(int j=0;j<3;j++)
    {
     if(m_arr_tPequenio[i][j]==77)
     {
@@ -222,9 +223,9 @@ void Juego::RastrearMinas()
   }
 
   cout<<"\nTablero minado y rastreado\n\n";
-    for(int i=0;i<5;i++)
+    for(int i=0;i<3;i++)
     {
-     for(int j=0;j<5;j++)
+     for(int j=0;j<3;j++)
      {
       cout<<"\t"<<m_arr_tPequenio[i][j]<<"\t";
      } cout<<endl<<endl<<endl<<endl;

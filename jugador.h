@@ -11,7 +11,7 @@ private:
     string m_string_nombre;
 
 public:
-    Jugador(string nombre);
+    Jugador(const string &nombre);
     string ObtenerNombre();
 };
 #endif

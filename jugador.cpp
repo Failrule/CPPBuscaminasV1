@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Jugador::Jugador(string nombre)
+Jugador::Jugador(const string &nombre)
 {
     m_string_nombre = nombre;
 }

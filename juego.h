@@ -25,7 +25,7 @@ private:
 
     std::string m_str_estalla;
 
-    int m_arr_tPequenio[3][3];
+    int m_arr_tPequenio[5][5];
 
     int m_arr_tNormal[5][5];
 
@@ -41,12 +41,12 @@ public:
     /**
     * @param jugador del juego actual
     */
-    void CargarPuntaje(std::string jugador);
+    void CargarPuntaje(const std::string &jugador);
 
     /**
     * @param puntajeObtenido del juego actual
     */
-    void Guardar(int puntajeObtenido, std::string jugador);
+    void Guardar(int puntajeObtenido, const std::string &jugador);
 
     /**
     * Juego

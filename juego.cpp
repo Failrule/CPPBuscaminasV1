@@ -133,7 +133,7 @@ srand (time(NULL));
 
      int count = 0;
      //int minas = (5*5)*m_int_dificultad/100;
-     int minas = 1;
+     int minas = 2;
 
      cout<<"--"<<minas<<"--"<<endl;
      int lugar1,lugar2;
@@ -195,6 +195,10 @@ void Juego::RastrearMinas()
      if(m_arr_tPequenio[i-1][j]==88){contador++;}else{}//superior
      cout<<"Celda "<<i<<j<<" superior es "<<m_arr_tPequenio[i-1][j]<<" contador "<<contador<<endl;
 
+     if(j==4)
+     {}
+     else
+     {
      if(m_arr_tPequenio[i-1][j+1]==88){contador++;}else{}//superior derecha
      cout<<"Celda "<<i<<j<<" superior derecha es "<<m_arr_tPequenio[i-1][j+1]<<" contador "<<contador<<endl;
 
@@ -203,10 +207,13 @@ void Juego::RastrearMinas()
 
      if(m_arr_tPequenio[i+1][j+1]==88){contador++;}else{}//inferior derecha
      cout<<"Celda "<<i<<j<<" inferior derecha es "<<m_arr_tPequenio[i+1][j+1]<<" contador "<<contador<<endl;
-
+     }
      if(m_arr_tPequenio[i+1][j]==88){contador++;}else{}//inferior
      cout<<"Celda "<<i<<j<<" inferior es "<<m_arr_tPequenio[i+1][j]<<" contador "<<contador<<endl;
-
+     if(j==0)
+     {}
+     else
+     {
      if(m_arr_tPequenio[i+1][j-1]==88){contador++;}else{}//inferior izquierda
      cout<<"Celda "<<i<<j<<" inferior izquierda es "<<m_arr_tPequenio[i+1][j-1]<<" contador "<<contador<<endl;
 
@@ -215,10 +222,10 @@ void Juego::RastrearMinas()
 
      if(m_arr_tPequenio[i-1][j-1]==88){contador++;}else{}//superior izquierda
      cout<<"Celda "<<i<<j<<" superior izquierda es "<<m_arr_tPequenio[i-1][j-1]<<" contador "<<contador<<endl;
-
+     }
      m_arr_tPequenio[i][j]=contador;
     }
-    //Si es mina, no hacer nada
+    //Si es mina, no hacer nada.
    }
   }
 

@@ -159,7 +159,6 @@ srand (time(NULL));
         else
         {
          cout<<"Mina "<<minas<<" repetida "<<lugar1<<lugar2<<endl;
-
         }
 
 

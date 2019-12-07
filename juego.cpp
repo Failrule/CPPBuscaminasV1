@@ -192,35 +192,102 @@ void Juego::RastrearMinas()
     if(m_arr_tPequenio[i][j]==77)
     {
      int contador = 0;
-     if(m_arr_tPequenio[i-1][j]==88){contador++;}else{}//superior
+     if(m_arr_tPequenio[i-1][j]==88)
+     {
+         contador++;
+         
+     }
+     else
+     {
+        
+     }//superior
      cout<<"Celda "<<i<<j<<" superior es "<<m_arr_tPequenio[i-1][j]<<" contador "<<contador<<endl;
 
      if(j==4)
-     {}
+     {
+         
+     }
      else
      {
-     if(m_arr_tPequenio[i-1][j+1]==88){contador++;}else{}//superior derecha
+     if(m_arr_tPequenio[i-1][j+1]==88)
+     {
+         contador++;
+         
+     }
+     else
+     {
+        
+     }//superior derecha
      cout<<"Celda "<<i<<j<<" superior derecha es "<<m_arr_tPequenio[i-1][j+1]<<" contador "<<contador<<endl;
 
-     if(m_arr_tPequenio[i][j+1]==88){contador++;}else{}//derecha
-     cout<<"Celda "<<i<<j<<" derecha es "<<m_arr_tPequenio[i][j+1]<<" contador "<<contador<<endl;
-
-     if(m_arr_tPequenio[i+1][j+1]==88){contador++;}else{}//inferior derecha
-     cout<<"Celda "<<i<<j<<" inferior derecha es "<<m_arr_tPequenio[i+1][j+1]<<" contador "<<contador<<endl;
+     if(m_arr_tPequenio[i][j+1]==88)
+     {
+         contador++;
+         
      }
-     if(m_arr_tPequenio[i+1][j]==88){contador++;}else{}//inferior
-     cout<<"Celda "<<i<<j<<" inferior es "<<m_arr_tPequenio[i+1][j]<<" contador "<<contador<<endl;
-     if(j==0)
-     {}
      else
      {
-     if(m_arr_tPequenio[i+1][j-1]==88){contador++;}else{}//inferior izquierda
+        
+     }//derecha
+     cout<<"Celda "<<i<<j<<" derecha es "<<m_arr_tPequenio[i][j+1]<<" contador "<<contador<<endl;
+
+     if(m_arr_tPequenio[i+1][j+1]==88){
+         contador++;
+         
+     }
+     else
+     {
+        
+     }//inferior derecha
+     cout<<"Celda "<<i<<j<<" inferior derecha es "<<m_arr_tPequenio[i+1][j+1]<<" contador "<<contador<<endl;
+     }
+     if(m_arr_tPequenio[i+1][j]==88)
+     {
+         contador++;
+         
+     }
+     else
+     {
+        
+     }//inferior
+     cout<<"Celda "<<i<<j<<" inferior es "<<m_arr_tPequenio[i+1][j]<<" contador "<<contador<<endl;
+     
+     if(j==0)
+     {
+         
+     }
+     else
+     {
+     if(m_arr_tPequenio[i+1][j-1]==88)
+     {
+         contador++;
+         
+     }
+     else
+     {
+         
+     }//inferior izquierda
      cout<<"Celda "<<i<<j<<" inferior izquierda es "<<m_arr_tPequenio[i+1][j-1]<<" contador "<<contador<<endl;
 
-     if(m_arr_tPequenio[i][j-1]==88){contador++;}else{}//izquierda
+     if(m_arr_tPequenio[i][j-1]==88){
+         contador++;
+         
+     }
+     else
+     {
+        
+     }//izquierda
      cout<<"Celda "<<i<<j<<" izquierda es "<<m_arr_tPequenio[i][j-1]<<" contador "<<contador<<endl;
 
-     if(m_arr_tPequenio[i-1][j-1]==88){contador++;}else{}//superior izquierda
+     if(m_arr_tPequenio[i-1][j-1]==88)
+     {
+         contador++;
+         
+     }
+     else
+     {
+         
+     }//superior izquierda
      cout<<"Celda "<<i<<j<<" superior izquierda es "<<m_arr_tPequenio[i-1][j-1]<<" contador "<<contador<<endl;
      }
      m_arr_tPequenio[i][j]=contador;
